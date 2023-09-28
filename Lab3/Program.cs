@@ -242,13 +242,13 @@ namespace Lab3
             {
                 for (int j = 0; j < size; j++)
                 {
-                    if (j < i)
+                    if (i == 0 || j == 0 || i == matrix.GetLength(0) - 1 || j == matrix.GetLength(1) - 1)
                     {
-                        matrix[i, j] = 0;
+                        matrix[i, j] = Math.Pow(x, Math.Abs(j - i));
                     }
                     else
                     {
-                        matrix[i, j] = Math.Pow(x, j - i);
+                        matrix[i, j] = 0;
                     }
                 }
             }
